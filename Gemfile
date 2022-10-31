@@ -17,17 +17,21 @@ gem 'jbuilder', '~> 2.5'
 gem 'bootstrap', '~> 4.4.1'
 gem 'bootsnap'
 gem 'jquery-rails'
-
+gem 'faker'
+gem 'figaro'
+gem 'faraday'
+gem 'jsonapi-serializer'
+gem 'faker'
 
 group :development, :test do
   gem 'pry'
+  gem 'factory_bot_rails'
 end
 
 group :test do
   gem 'rspec-rails'
   gem 'capybara'
   gem 'launchy'
-  gem 'faker'
   gem 'simplecov'
 end
 

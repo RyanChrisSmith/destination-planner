@@ -1,11 +1,13 @@
 class DestinationsController < ApplicationController
-  before_action :set_destination, only: [:show, :edit, :update, :destroy]
+  before_action :set_destination, only: %i[show edit update destroy]
 
   def index
     @destinations = Destination.all
   end
 
   def show
+    @weather = WeatherFacade.get_current_weather(@destination.name)
+    @url = GiphyFacade.image_request(@weather.summary)
   end
 
   def new

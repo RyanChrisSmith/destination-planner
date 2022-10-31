@@ -19,3 +19,10 @@ class Seed
 end
 
 Seed.start
+
+Destination.create!(
+  name: 'Littleton',
+  zip: 80123,
+  description: Faker::Lorem.sentence,
+  image_url: Faker::Placeholdit.image
+  )

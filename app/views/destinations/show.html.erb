@@ -15,12 +15,14 @@
     <%= @destination.description %>
   </p>
 
-  <%= image_tag(@destination.image_url) %>
+  <%= image_tag(@url.url) %>
 
-  <div class="row">
-    <h4>Forecast for <%= @destination.name %>:</h4>
+    <p><h4>Forecast for <%= @weather.location %>:</h4></p>
+    <p><strong><%= @weather.date.strftime("%A, %B %e") %></strong></p>
+    <p>Low Temp: <%= @weather.low_temp %><span>&#176;</span>F</p>
+    <p>High Temp: <%= @weather.high_temp %><span>&#176;</span>F</p>
+    <p>Summary: <%= @weather.summary %></p>
 
-  </div>
 
   <div class="row">
     <%= link_to 'Edit', edit_destination_path(@destination) %> |
